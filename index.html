@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>🌥 Weather App</title>
+  </head>
+  <body class="bg-gradient-to-r from-[#36d1dc] to-[#5b86e5]">
+    <!-- For search field -->
+    <div class="text-center mt-10">
+      <input
+        type="text"
+        id="inputBox"
+        class="outline-none rounded-2xl h-8 opacity-40 p-2"
+        placeholder="Enter city name here"
+      />
+      <button
+        class="bg-[#5b86e5] p-2 rounded-3xl hover:bg-[#4c85ff] btn"
+        onclick="getValue()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Section for showing weather -->
+    <section class="flex flex-col items-center">
+      <div class="flex items-center justify-center mt-28">
+        <div
+          class="bg-white/30 w-72 h-56 rounded-xl drop-shadow-lg backdrop-filter backdrop-blur-xl flex flex-col items-center pt-8"
+        >
+          <h1 id="city-name" class="text-3xl font-semibold text-gray-900"></h1>
+          <p id="season" class="mt-4"></p>
+          <img src="" alt="" id="weatherImg" />
+
+          <p class="text-lg"><span id="max_temp"></span></p>
+        </div>
+      </div>
+
+      <!-- div for inserting forecast weather in the dom -->
+      <div class="forecast mt-16 flex flex-row space-x-14 text-center"></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
